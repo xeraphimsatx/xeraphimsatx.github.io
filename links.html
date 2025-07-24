@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="XERAPHIM - Official Links">
+  <title>XERAPHIM Links</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <!-- Analytics Placeholder -->
+  <script>// Analytics tracking code placeholder</script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-left">
+      <span class="site-title">XERAPHIM</span>
+    </div>
+    <nav class="header-socials">
+      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" /></a>
+      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Apple_Music_logo.svg" alt="Apple Music" /></a>
+      <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" /></a>
+      <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
+      <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/TikTok_logo.svg" alt="TikTok" /></a>
+      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord" /></a>
+    </nav>
+    <div class="header-lang">
+      <button class="lang-toggle" aria-label="Switch language">EN</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
+    </div>
+  </header>
+  <main>
+    <section class="links-hero" style="text-align:center;padding:2.5em 1em 1em 1em;">
+      <img class="artist-photo" src="https://placehold.co/180x180/5a293c/fff?text=Artist" alt="XERAPHIM artist photo" style="margin-bottom:1em;" />
+      <h1 class="artist-name">XERAPHIM</h1>
+      <p style="color:var(--color-muted);margin-bottom:2em;">Darkwave / Postpunk / Goth</p>
+      <div class="linktree-links" style="display:flex;flex-direction:column;gap:1.1em;max-width:340px;margin:0 auto;">
+        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-pink);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Listen on Spotify</a>
+        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-highlight);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Apple Music</a>
+        <a class="linktree-btn" href="index.html" style="background:var(--color-accent);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Main Website</a>
+        <a class="linktree-btn" href="merch.html" style="background:var(--color-bg-alt);color:var(--color-pink);font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;border:2px solid var(--color-pink);">Official Merch</a>
+        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Instagram</a>
+        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">TikTok</a>
+        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Discord</a>
+      </div>
+    </section>
+  </main>
+  <script>
+    // Event tracking for Linktree buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.linktree-btn').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          gtag('event', 'linktree_click', {
+            'event_category': 'Linktree',
+            'event_label': btn.textContent.trim()
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html> 
