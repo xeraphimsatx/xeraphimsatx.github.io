@@ -6,7 +6,18 @@
 <body>
   <header class="site-header">
     <div class="header-left">
-      <span class="site-title">XERAPHIM</span>
+      <a href="index.html" class="site-title">XERAPHIM</a>
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu &#x25BC;</button>
+        <div class="dropdown-content" role="menu">
+          <a href="merch.html">Merch</a>
+          <!-- <a href="assets.html">Assets</a> -->
+          <a href="links.html">Links</a>
+          <a href="socials.html">Contact</a>
+          <a href="tour.html">Tour</a>
+          <a href="epk.html">EPK</a>
+        </div>
+      </div>
     </div>
     <nav class="header-socials">
       <a href="https://xeraphimsatx.bandcamp.com/" aria-label="Bandcamp" target="_blank" rel="noopener"><img src="img/logo-bandcamp.svg" alt="Bandcamp" /></a>
@@ -22,6 +33,18 @@
       <span class="lang-divider">|</span>
       <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
     </div>
+    <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu-overlay"></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu">
+      <a href="merch.html">Merch</a>
+      <!-- <a href="assets.html">Assets</a> -->
+      <a href="links.html">Links</a>
+      <a href="socials.html">Contact</a>
+      <a href="tour.html">Tour</a>
+      <a href="epk.html">EPK</a>
+    </nav>
   </header>
   <div class="artist-banner">
     <img src="https://placehold.co/1200x400/5a293c/fff?text=Artist+Banner" alt="XERAPHIM artist banner" />
@@ -47,7 +70,7 @@
     <nav class="footer-nav">
       <a href="index.html">Home</a>
       <a href="merch.html">Merch</a>
-      <a href="assets.html">Assets</a>
+      <!-- <a href="assets.html">Assets</a> -->
       <a href="links.html">Links</a>
       <a href="socials.html">Socials</a>
       <a href="tour.html">Tour</a>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="XERAPHIM - Official Links">
-  <title>XERAPHIM Links</title>
+  <meta name="description" content="XERAPHIM - All Links">
+  <title>XERAPHIM - Links</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Google Analytics -->
@@ -15,56 +15,137 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  <!-- Analytics Placeholder -->
-  <script>// Analytics tracking code placeholder</script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-left">
-      <span class="site-title">XERAPHIM</span>
+      <a href="index.html" class="site-title">XERAPHIM</a>
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu &#x25BC;</button>
+        <div class="dropdown-content" role="menu">
+          <a href="merch.html">Merch</a>
+          <!-- <a href="assets.html">Assets</a> -->
+          <a href="links.html">Links</a>
+          <a href="socials.html">Socials</a>
+          <a href="tour.html">Tour</a>
+          <a href="epk.html">EPK</a>
+        </div>
+      </div>
     </div>
     <nav class="header-socials">
-      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" /></a>
-      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Apple_Music_logo.svg" alt="Apple Music" /></a>
-      <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" /></a>
-      <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
-      <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/TikTok_logo.svg" alt="TikTok" /></a>
-      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord" /></a>
+      <a href="#" aria-label="Bandcamp" target="_blank" rel="noopener"><img src="img/logo-bandcamp.svg" alt="Bandcamp" /></a>
+      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="img/logo-spotify.svg" alt="Spotify" /></a>
+      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="img/logo-apple-music.svg" alt="Apple Music" /></a>
+      <a href="https://www.facebook.com/people/Xeraphim/" aria-label="Facebook" target="_blank" rel="noopener"><img src="img/logo-facebook.svg" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/thisisxeraphim" aria-label="Instagram" target="_blank" rel="noopener"><img src="img/logo-instagram.svg" alt="Instagram" /></a>
+      <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><img src="img/logo-tiktok.svg" alt="TikTok" /></a>
+      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="img/logo-discord.svg" alt="Discord" /></a>
     </nav>
     <div class="header-lang">
       <button class="lang-toggle" aria-label="Switch language">EN</button>
       <span class="lang-divider">|</span>
       <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
     </div>
+    <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu-overlay"></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu">
+      <a href="merch.html">Merch</a>
+      <!-- <a href="assets.html">Assets</a> -->
+      <a href="links.html">Links</a>
+      <a href="socials.html">Socials</a>
+      <a href="tour.html">Tour</a>
+      <a href="epk.html">EPK</a>
+    </nav>
   </header>
   <main>
-    <section class="links-hero" style="text-align:center;padding:2.5em 1em 1em 1em;">
-      <img class="artist-photo" src="https://placehold.co/180x180/5a293c/fff?text=Artist" alt="XERAPHIM artist photo" style="margin-bottom:1em;" />
-      <h1 class="artist-name">XERAPHIM</h1>
-      <p style="color:var(--color-muted);margin-bottom:2em;">Darkwave / Postpunk / Goth</p>
-      <div class="linktree-links" style="display:flex;flex-direction:column;gap:1.1em;max-width:340px;margin:0 auto;">
-        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-pink);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Listen on Spotify</a>
-        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-highlight);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Apple Music</a>
-        <a class="linktree-btn" href="index.html" style="background:var(--color-accent);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Main Website</a>
-        <a class="linktree-btn" href="merch.html" style="background:var(--color-bg-alt);color:var(--color-pink);font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;border:2px solid var(--color-pink);">Official Merch</a>
-        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Instagram</a>
-        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">TikTok</a>
-        <a class="linktree-btn" href="#" target="_blank" style="background:var(--color-bg-alt);color:#fff;font-weight:700;padding:1em 0;border-radius:8px;text-decoration:none;font-size:1.1em;">Discord</a>
+    <section class="links-section">
+      <h1>All Links</h1>
+      <p>Everything XERAPHIM in one place.</p>
+      
+      <div class="links-grid">
+        <a href="#" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'spotify'});">
+          <h3>Spotify</h3>
+          <p>Listen on Spotify</p>
+        </a>
+        
+        <a href="#" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'apple_music'});">
+          <h3>Apple Music</h3>
+          <p>Listen on Apple Music</p>
+        </a>
+        
+        <a href="index.html" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'website'});">
+          <h3>Website</h3>
+          <p>Official Website</p>
+        </a>
+        
+        <a href="merch.html" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'merch'});">
+          <h3>Merch</h3>
+          <p>Official Merchandise</p>
+        </a>
       </div>
     </section>
   </main>
+  <footer class="site-footer">
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="merch.html">Merch</a>
+      <!-- <a href="assets.html">Assets</a> -->
+      <a href="links.html">Links</a>
+      <a href="socials.html">Socials</a>
+      <a href="tour.html">Tour</a>
+      <a href="epk.html">EPK</a>
+    </nav>
+    <p>&copy; 2024 XERAPHIM. All rights reserved.</p>
+  </footer>
   <script>
-    // Event tracking for Linktree buttons
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.linktree-btn').forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          gtag('event', 'linktree_click', {
-            'event_category': 'Linktree',
-            'event_label': btn.textContent.trim()
-          });
-        });
-      });
+    // Hamburger menu toggle with overlay
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
     });
+    menuOverlay.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Dropdown delay logic
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = dropdown.querySelector('.dropbtn');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    let dropdownTimeout;
+
+    function openDropdown() {
+      clearTimeout(dropdownTimeout);
+      dropdown.classList.add('dropdown-open');
+      dropbtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      dropdownTimeout = setTimeout(() => {
+        dropdown.classList.remove('dropdown-open');
+        dropbtn.setAttribute('aria-expanded', 'false');
+      }, 200); // 200ms delay
+    }
+    dropbtn.addEventListener('mouseenter', openDropdown);
+    dropdownContent.addEventListener('mouseenter', openDropdown);
+    dropbtn.addEventListener('mouseleave', closeDropdown);
+    dropdownContent.addEventListener('mouseleave', closeDropdown);
+    dropbtn.addEventListener('focus', openDropdown);
+    dropbtn.addEventListener('blur', closeDropdown);
   </script>
 </body>
 </html> 

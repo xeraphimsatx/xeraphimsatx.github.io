@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="XERAPHIM Merch - Official Store">
-  <title>XERAPHIM Merch</title>
+  <meta name="description" content="XERAPHIM - Official Merchandise">
+  <title>XERAPHIM - Merch</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Google Analytics -->
@@ -19,43 +19,61 @@
 <body>
   <header class="site-header">
     <div class="header-left">
-      <span class="site-title">XERAPHIM</span>
+      <a href="index.html" class="site-title">XERAPHIM</a>
+      <div class="dropdown">
+        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu &#x25BC;</button>
+        <div class="dropdown-content" role="menu">
+          <a href="merch.html">Merch</a>
+          <!-- <a href="assets.html">Assets</a> -->
+          <a href="links.html">Links</a>
+          <a href="socials.html">Socials</a>
+          <a href="tour.html">Tour</a>
+          <a href="epk.html">EPK</a>
+        </div>
+      </div>
     </div>
     <nav class="header-socials">
-      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" /></a>
-      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="https://upload.wikedia.org/wikipedia/commons/d/df/Apple_Music_logo.svg" alt="Apple Music" /></a>
-      <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" /></a>
-      <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" /></a>
-      <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/TikTok_logo.svg" alt="TikTok" /></a>
-      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Discord_logo.svg" alt="Discord" /></a>
+      <a href="#" aria-label="Bandcamp" target="_blank" rel="noopener"><img src="img/logo-bandcamp.svg" alt="Bandcamp" /></a>
+      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="img/logo-spotify.svg" alt="Spotify" /></a>
+      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="img/logo-apple-music.svg" alt="Apple Music" /></a>
+      <a href="https://www.facebook.com/people/Xeraphim/" aria-label="Facebook" target="_blank" rel="noopener"><img src="img/logo-facebook.svg" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/thisisxeraphim" aria-label="Instagram" target="_blank" rel="noopener"><img src="img/logo-instagram.svg" alt="Instagram" /></a>
+      <a href="#" aria-label="TikTok" target="_blank" rel="noopener"><img src="img/logo-tiktok.svg" alt="TikTok" /></a>
+      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="img/logo-discord.svg" alt="Discord" /></a>
     </nav>
     <div class="header-lang">
       <button class="lang-toggle" aria-label="Switch language">EN</button>
       <span class="lang-divider">|</span>
       <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
     </div>
+    <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="menu-overlay"></div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu">
+      <a href="merch.html">Merch</a>
+      <!-- <a href="assets.html">Assets</a> -->
+      <a href="links.html">Links</a>
+      <a href="socials.html">Socials</a>
+      <a href="tour.html">Tour</a>
+      <a href="epk.html">EPK</a>
+    </nav>
   </header>
   <main>
     <section class="merch-section">
-      <h1>Official Merch</h1>
-      <div class="printful-embed" style="background:var(--color-bg-alt);padding:2em;text-align:center;border-radius:10px;">
-        <!-- Printful Embed Placeholder -->
-        <p>[Printful Merch Embed Placeholder]</p>
-        <img src="https://placehold.co/320x200/1b4b4b/fff?text=Merch+Preview" alt="Merch preview" style="max-width:100%;border-radius:8px;" />
+      <h1>Official Merchandise</h1>
+      <p>Get your XERAPHIM gear. All items are print-on-demand and ship worldwide.</p>
+      <!-- Printful embed will go here -->
+      <div class="printful-embed">
+        <p>Merch store coming soon...</p>
       </div>
-    </section>
-    <section class="testimonials-section">
-      <h2>What Fans & Press Say</h2>
-      <blockquote>"XERAPHIM's music is a haunting journey through neon-lit shadows." – Darkwave Blog</blockquote>
-      <blockquote>"A must-listen for fans of postpunk and goth revival." – Lorem Ipsum Magazine</blockquote>
-      <blockquote>"The merch is as stylish as the music!" – Fan</blockquote>
     </section>
   </main>
   <footer class="site-footer">
     <nav class="footer-nav">
       <a href="index.html">Home</a>
       <a href="merch.html">Merch</a>
-      <a href="assets.html">Assets</a>
+      <!-- <a href="assets.html">Assets</a> -->
       <a href="links.html">Links</a>
       <a href="socials.html">Socials</a>
       <a href="tour.html">Tour</a>
@@ -63,5 +81,53 @@
     </nav>
     <p>&copy; 2024 XERAPHIM. All rights reserved.</p>
   </footer>
+  <script>
+    // Hamburger menu toggle with overlay
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+    menuOverlay.addEventListener('click', closeMenu);
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Dropdown delay logic
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = dropdown.querySelector('.dropbtn');
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    let dropdownTimeout;
+
+    function openDropdown() {
+      clearTimeout(dropdownTimeout);
+      dropdown.classList.add('dropdown-open');
+      dropbtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      dropdownTimeout = setTimeout(() => {
+        dropdown.classList.remove('dropdown-open');
+        dropbtn.setAttribute('aria-expanded', 'false');
+      }, 200); // 200ms delay
+    }
+    dropbtn.addEventListener('mouseenter', openDropdown);
+    dropdownContent.addEventListener('mouseenter', openDropdown);
+    dropbtn.addEventListener('mouseleave', closeDropdown);
+    dropdownContent.addEventListener('mouseleave', closeDropdown);
+    dropbtn.addEventListener('focus', openDropdown);
+    dropbtn.addEventListener('blur', closeDropdown);
+  </script>
 </body>
 </html> 

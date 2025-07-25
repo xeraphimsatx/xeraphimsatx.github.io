@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap');
 
 :root {
-  --color-bg: #2c2d32;
+  --color-bg: #1d1e20;
   --color-bg-alt: #263437;
   --color-accent: #1b4b4b;
   --color-highlight: #5a293c;
-  --color-pink: #b62779;
+  --color-pink: #d28a80;
   --color-text: #f5f5f5;
   --color-muted: #bdbdbd;
 }
@@ -14,10 +14,27 @@ html, body {
   margin: 0;
   padding: 0;
   background: var(--color-bg);
+  background-image: url('img/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--color-text);
   font-family: 'Montserrat', Arial, sans-serif;
   min-height: 100vh;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  background: var(--color-bg);
+  margin: 0 auto;
+  max-width: 500px;
+  padding: 2em 1em;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  flex: 1;
 }
 
 .site-header {
@@ -333,6 +350,7 @@ img, iframe {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1em;
+  text-align: center;
 }
 .spotify-embed {
   margin: 1em 0;
@@ -350,6 +368,9 @@ img, iframe {
   font-family: 'Cinzel', serif;
   font-size: 1.1rem;
   margin: 0 0 0.5em 0;
+  text-align: center;
+}
+.substack-signup p {
   text-align: center;
 }
 .substack-signup form {
@@ -389,7 +410,7 @@ img, iframe {
   color: var(--color-muted);
   text-align: center;
   padding: 1.2em 0 0.5em 0;
-  margin-top: 2em;
+  margin-top: auto;
   font-size: 0.95em;
 }
 .footer-nav {
@@ -470,6 +491,88 @@ img, iframe {
   background: var(--color-highlight);
 }
 
+/* Center all section content */
+.merch-section, .assets-section, .links-section, .contact-section, .tour-section, .epk-section {
+  text-align: center;
+}
+
+.merch-section h1, .assets-section h1, .links-section h1, .contact-section h1, .tour-section h1, .epk-section h1 {
+  text-align: center;
+}
+
+.merch-section p, .assets-section p, .links-section p, .contact-section p, .tour-section p, .epk-section p {
+  text-align: center;
+}
+
+/* Center asset items */
+.asset-item {
+  text-align: center;
+}
+
+.asset-item h3 {
+  text-align: center;
+}
+
+.asset-item p {
+  text-align: center;
+}
+
+/* Center social links */
+.social-links {
+  text-align: center;
+}
+
+.social-link, .contact-link {
+  text-align: center;
+}
+
+.social-link h3, .contact-link h3 {
+  text-align: center;
+}
+
+.social-link p, .contact-link p {
+  text-align: center;
+}
+
+/* Center EPK content */
+.epk-content {
+  text-align: center;
+}
+
+.epk-download h2 {
+  text-align: center;
+}
+
+.epk-download p {
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  text-align: center;
+}
+
+.testimonials-section blockquote {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Center links grid */
+.links-grid {
+  text-align: center;
+}
+
+.link-card {
+  text-align: center;
+}
+
+.link-card h3 {
+  text-align: center;
+}
+
+.link-card p {
+  text-align: center;
+}
+
 @media (min-width: 600px) {
   .hero {
     flex-direction: row;
@@ -485,7 +588,7 @@ img, iframe {
     height: 180px;
   }
   .hero-content {
-    text-align: left;
+    text-align: center;
     max-width: 500px;
     padding: 0;
   }
@@ -501,7 +604,7 @@ img, iframe {
   margin: 0 auto 1.2em auto;
   overflow: hidden;
   border-radius: 12px;
-  display: block;
+  display: none;
 }
 .artist-banner img {
   width: 100%;
@@ -518,5 +621,106 @@ img, iframe {
   .artist-banner img {
     aspect-ratio: 3/1;
     border-radius: 8px;
+  }
+} 
+
+/* Contact page specific styles */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-top: 2em;
+}
+
+.contact-item {
+  background: var(--color-bg-alt);
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.contact-item h2 {
+  color: var(--color-pink);
+  font-family: 'Cinzel', serif;
+  font-size: 1.3rem;
+  margin: 0 0 0.8em 0;
+  text-align: center;
+}
+
+.contact-item p {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--color-pink);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover {
+  color: var(--color-highlight);
+}
+
+.contact-item ul {
+  text-align: left;
+  margin: 1em 0;
+  padding-left: 1.5em;
+}
+
+.contact-item li {
+  margin: 0.3em 0;
+  color: var(--color-muted);
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.social-link {
+  background: var(--color-accent);
+  padding: 1em;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.social-link:hover {
+  background: var(--color-highlight);
+}
+
+.social-link h3 {
+  color: var(--color-pink);
+  margin: 0 0 0.3em 0;
+  font-size: 1.1rem;
+}
+
+.social-link p {
+  color: var(--color-muted);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  .contact-info {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .contact-item {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .social-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .social-link {
+    flex: 1;
+    min-width: 120px;
   }
 } 
