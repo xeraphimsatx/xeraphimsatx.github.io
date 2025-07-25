@@ -22,7 +22,9 @@ html, body {
   color: var(--color-text);
   font-family: 'Montserrat', Arial, sans-serif;
   min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
@@ -35,6 +37,7 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 24px rgba(0,0,0,0.3);
   flex: 1;
+  overflow: visible;
 }
 
 .site-header {
@@ -43,18 +46,12 @@ main {
   justify-content: space-between;
   background: var(--color-bg-alt);
   padding: 1rem 2rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.site-title {
-  font-family: 'Cinzel', serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.2em;
-  color: var(--color-pink);
-  font-weight: 700;
 }
 
 .header-socials {
@@ -88,6 +85,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  margin-left: auto;
 }
 .lang-toggle {
   background: none;
@@ -186,38 +184,6 @@ main {
   transition: opacity 0.1s;
 }
 
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 36px;
-  height: 36px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 1100;
-  margin-left: 1em;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 3px;
-  background: var(--color-text);
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
 /* Overlay for mobile menu */
 .menu-overlay {
   display: none;
@@ -230,6 +196,7 @@ main {
   z-index: 1049;
   transition: opacity 0.2s;
 }
+
 .menu-overlay.active {
   display: block;
 }
@@ -251,6 +218,7 @@ main {
   align-items: center;
   justify-content: flex-start;
 }
+
 .mobile-menu a {
   color: var(--color-text);
   padding: 1.2em 2em;
@@ -264,10 +232,12 @@ main {
   text-align: center;
   border-radius: 0;
 }
+
 .mobile-menu a:hover {
   background: var(--color-highlight);
   color: var(--color-pink);
 }
+
 .mobile-menu.active {
   display: flex;
 }
@@ -276,10 +246,6 @@ main {
   .site-header {
     flex-wrap: wrap;
     padding: 0.5rem 0.5rem;
-  }
-  .header-left {
-    flex: 1 1 100%;
-    min-width: 0;
   }
   .header-socials {
     position: absolute;
@@ -300,23 +266,17 @@ main {
     justify-content: center;
     margin-top: 0.3em;
   }
-  .hamburger {
-    display: flex;
-    position: absolute;
-    right: 1em;
-    top: 0.7em;
-    z-index: 1101;
-  }
   .header-nav {
     display: none;
   }
 }
+
 @media (min-width: 901px) {
-  .mobile-menu, .menu-overlay, .hamburger {
+  .mobile-menu, .menu-overlay {
     display: none !important;
   }
   .header-nav {
-    display: flex;
+    display: none;
   }
   .header-socials {
     position: absolute;
@@ -337,9 +297,13 @@ img, iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem 1rem 1rem 1rem;
   background: var(--color-bg);
   gap: 1.5em;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .artist-photo {
   width: 120px;
@@ -355,6 +319,10 @@ img, iframe {
   width: 100%;
   text-align: center;
   padding: 0 0.5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .artist-name {
   font-family: 'Cinzel', serif;
@@ -371,15 +339,41 @@ img, iframe {
   text-align: center;
 }
 .spotify-embed {
-  margin: 1em 0;
+  margin: 1em auto;
+  text-align: center;
+  max-width: 100%;
+  display: block;
+  width: 100%;
+}
+
+.spotify-embed iframe {
+  margin: 0 auto !important;
+  display: block !important;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Specific override for Bandcamp embed */
+.spotify-embed iframe[src*="bandcamp.com"] {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  width: 100%;
 }
 
 .substack-signup {
   background: var(--color-bg-alt);
   border-radius: 12px;
   padding: 1.5em 1em;
-  margin: 1.5em 0 0 0;
+  margin: 1.5em auto 0 auto;
   box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  text-align: center;
+  max-width: 100%;
+}
+
+.substack-signup iframe {
+  margin: 0 auto;
+  display: block;
 }
 .substack-signup h2 {
   color: var(--color-pink);
@@ -429,8 +423,13 @@ img, iframe {
   color: var(--color-muted);
   text-align: center;
   padding: 1.5em 0 0.8em 0;
-  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   font-size: 1.1em;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
 }
 .footer-nav {
   display: flex;
@@ -842,7 +841,8 @@ img, iframe {
 
 .merch-link {
   text-align: center;
-  margin: 1.5em 0;
+  margin: 1.5em auto;
+  max-width: 100%;
 }
 
 .merch-button {
@@ -931,4 +931,115 @@ img, iframe {
     font-size: 1.7em;
     padding: 1.6em 3.5em;
   }
+} 
+
+/* Add padding to body to account for fixed header and footer */
+body {
+  padding-top: 80px; /* Adjust based on header height */
+  padding-bottom: 100px; /* Adjust based on footer height */
+}
+
+@media (max-width: 900px) {
+  body {
+    padding-top: 120px; /* More padding on mobile for stacked header */
+    padding-bottom: 120px; /* More padding on mobile for footer */
+  }
+  
+  main {
+    padding: 2em 1em;
+    margin: 0 1em;
+    max-width: none;
+    width: auto;
+  }
+  
+  .site-header {
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .site-footer {
+    padding: 1em 0 0.5em 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 140px; /* Even more padding for very small screens */
+    padding-bottom: 140px;
+  }
+  
+  main {
+    padding: 1.5em 0.8em;
+    margin: 0 0.5em;
+    border-radius: 8px;
+  }
+  
+  .hero {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    gap: 1em;
+  }
+  
+  .artist-name {
+    font-size: 1.8rem;
+  }
+  
+  .artist-bio {
+    font-size: 1rem;
+  }
+  
+  .substack-signup {
+    padding: 1em 0.7em;
+    margin: 1em 0 0 0;
+  }
+  
+  .substack-signup h2 {
+    font-size: 1.2rem;
+  }
+  
+  .substack-signup p {
+    font-size: 1rem;
+  }
+  
+  .merch-button {
+    font-size: 1.1em;
+    padding: 1em 2em;
+  }
+}
+
+/* Ensure content doesn't get cut off */
+.hero-content {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+  padding: 0 0.5em;
+  box-sizing: border-box;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 900px) {
+  .header-socials img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .footer-nav a {
+    padding: 0.8em 1em;
+    font-size: 1.2em;
+  }
+  
+  .merch-button {
+    min-height: 44px; /* Minimum touch target size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Smooth scrolling for better mobile experience */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+* {
+  box-sizing: border-box;
 } 
