@@ -81,31 +81,7 @@ main {
   filter: none;
 }
 
-.header-lang {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  margin-left: auto;
-}
-.lang-toggle {
-  background: none;
-  border: none;
-  color: var(--color-muted);
-  font-size: 1rem;
-  cursor: pointer;
-  font-family: 'Montserrat', Arial, sans-serif;
-  padding: 0.1rem 0.5rem;
-  border-radius: 3px;
-  transition: background 0.2s, color 0.2s;
-}
-.lang-toggle:focus, .lang-toggle:hover {
-  background: var(--color-highlight);
-  color: var(--color-text);
-}
-.lang-divider {
-  color: var(--color-muted);
-  font-size: 1rem;
-}
+
 
 /* Dropdown and mobile menu styles */
 .header-nav {
@@ -259,13 +235,7 @@ main {
     margin-top: 0.5em;
     gap: 0.5em;
   }
-  .header-lang {
-    order: 4;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.3em;
-  }
+
   .header-nav {
     display: none;
   }
@@ -331,6 +301,17 @@ img, iframe {
   margin: 0.2em 0 0.5em 0;
   letter-spacing: 0.18em;
   text-align: center;
+}
+
+.artist-logo {
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 2em auto;
+  filter: brightness(1.1) contrast(1.1);
+  display: block;
+  position: relative;
+  z-index: 10;
 }
 .artist-bio {
   font-size: 1.2rem;
@@ -980,6 +961,11 @@ body {
   
   .artist-name {
     font-size: 1.8rem;
+  }
+  
+  .artist-logo {
+    max-width: 600px;
+    margin: 0 auto 1.5em auto;
   }
   
   .artist-bio {

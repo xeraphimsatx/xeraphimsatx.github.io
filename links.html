@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="XERAPHIM - All Links">
   <title>XERAPHIM - Links</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="links.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2K0EEK1VXR"></script>
@@ -13,140 +13,63 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-2K0EEK1VXR');
   </script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="header-left">
-      <a href="index.html" class="site-title">XERAPHIM</a>
-      <div class="dropdown">
-        <button class="dropbtn" aria-haspopup="true" aria-expanded="false">Menu &#x25BC;</button>
-        <div class="dropdown-content" role="menu">
-          <a href="https://thisisxeraphim.printful.me/" target="_blank" rel="noopener">Merch</a>
-          <!-- <a href="assets.html">Assets</a> -->
-          <a href="links.html">Links</a>
-          <a href="socials.html">Contact</a>
-          <a href="tour.html">Tour</a>
-          <!-- <a href="epk.html">EPK</a> -->
-        </div>
-      </div>
+  <div class="container">
+    <div class="profile-section">
+      <img src="img/XERAPHIMnamelogo.svg" alt="XERAPHIM" class="artist-logo" />
     </div>
-    <nav class="header-socials">
-      <a href="#" aria-label="Bandcamp" target="_blank" rel="noopener"><img src="img/logo-bandcamp.svg" alt="Bandcamp" /></a>
-      <a href="#" aria-label="Spotify" target="_blank" rel="noopener"><img src="img/logo-spotify.svg" alt="Spotify" /></a>
-      <a href="#" aria-label="Apple Music" target="_blank" rel="noopener"><img src="img/logo-apple-music.svg" alt="Apple Music" /></a>
-      <a href="https://www.facebook.com/people/Xeraphim/" aria-label="Facebook" target="_blank" rel="noopener"><img src="img/logo-facebook.svg" alt="Facebook" /></a>
-      <a href="https://www.instagram.com/thisisxeraphim" aria-label="Instagram" target="_blank" rel="noopener"><img src="img/logo-instagram.svg" alt="Instagram" /></a>
-      <a href="https://www.tiktok.com/@xeraphimsatx" aria-label="TikTok" target="_blank" rel="noopener"><img src="img/logo-tiktok.svg" alt="TikTok" /></a>
-      <a href="#" aria-label="Discord" target="_blank" rel="noopener"><img src="img/logo-discord.svg" alt="Discord" /></a>
-    </nav>
-    <div class="header-lang">
-      <button class="lang-toggle" aria-label="Switch language">EN</button>
-      <span class="lang-divider">|</span>
-      <button class="lang-toggle" aria-label="Cambiar idioma">ES</button>
-    </div>
-    <button class="hamburger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="menu-overlay"></div>
-    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile menu">
-      <a href="https://thisisxeraphim.printful.me/" target="_blank" rel="noopener">Merch</a>
-      <!-- <a href="assets.html">Assets</a> -->
-      <a href="links.html">Links</a>
-      <a href="socials.html">Contact</a>
-      <a href="tour.html">Tour</a>
-      <!-- <a href="epk.html">EPK</a> -->
-    </nav>
-  </header>
-  <main>
-    <section class="links-section">
-      <h1>All Links</h1>
-      <p>Everything XERAPHIM in one place.</p>
-      
-      <div class="links-grid">
-        <a href="#" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'spotify'});">
-          <h3>Spotify</h3>
-          <p>Listen on Spotify</p>
-        </a>
-        
-        <a href="#" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'apple_music'});">
-          <h3>Apple Music</h3>
-          <p>Listen on Apple Music</p>
-        </a>
-        
-        <a href="index.html" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'website'});">
-          <h3>Website</h3>
-          <p>Official Website</p>
-        </a>
-        
-        <a href="merch.html" class="link-card" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'merch'});">
-          <h3>Merch</h3>
-          <p>Official Merchandise</p>
-        </a>
+
+    <div class="links-section">
+      <div class="spotify-embed">
+        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/2LddVYHx6RIeXRzJrG5yEI?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <nav class="footer-nav">
-      <a href="index.html">Home</a>
-      <a href="https://thisisxeraphim.printful.me/" target="_blank" rel="noopener">Merch</a>
-      <!-- <a href="assets.html">Assets</a> -->
-      <a href="links.html">Links</a>
-      <a href="socials.html">Contact</a>
-      <a href="tour.html">Tour</a>
-      <!-- <a href="epk.html">EPK</a> -->
-    </nav>
-    <p>&copy; 2024 XERAPHIM. All rights reserved.</p>
-  </footer>
-  <script>
-    // Hamburger menu toggle with overlay
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const menuOverlay = document.querySelector('.menu-overlay');
 
-    function closeMenu() {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
+      <a href="index.html" class="link-button" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'website'});">
+        <img src="img/logo-website.svg" alt="Website" class="link-icon" />
+        <span class="link-text">Official Website</span>
+      </a>
 
-    hamburger.addEventListener('click', () => {
-      const expanded = hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-      hamburger.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-    });
-    menuOverlay.addEventListener('click', closeMenu);
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+      <a href="https://thisisxeraphim.printful.me/" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'merch'});">
+        <img src="img/logo-merch.svg" alt="Merch" class="link-icon" />
+        <span class="link-text">Merch</span>
+      </a>
 
-    // Dropdown delay logic
-    const dropdown = document.querySelector('.dropdown');
-    const dropbtn = dropdown.querySelector('.dropbtn');
-    const dropdownContent = dropdown.querySelector('.dropdown-content');
-    let dropdownTimeout;
+      <a href="https://www.instagram.com/thisisxeraphim" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'instagram'});">
+        <img src="img/logo-instagram.svg" alt="Instagram" class="link-icon" />
+        <span class="link-text">Instagram</span>
+      </a>
 
-    function openDropdown() {
-      clearTimeout(dropdownTimeout);
-      dropdown.classList.add('dropdown-open');
-      dropbtn.setAttribute('aria-expanded', 'true');
-    }
-    function closeDropdown() {
-      dropdownTimeout = setTimeout(() => {
-        dropdown.classList.remove('dropdown-open');
-        dropbtn.setAttribute('aria-expanded', 'false');
-      }, 400); // Changed from 200ms to 400ms delay
-    }
-    dropbtn.addEventListener('mouseenter', openDropdown);
-    dropdownContent.addEventListener('mouseenter', openDropdown);
-    dropbtn.addEventListener('mouseleave', closeDropdown);
-    dropdownContent.addEventListener('mouseleave', closeDropdown);
-    dropbtn.addEventListener('focus', openDropdown);
-    dropbtn.addEventListener('blur', closeDropdown);
-  </script>
+      <a href="https://xeraphimsatx.bandcamp.com/" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'bandcamp'});">
+        <img src="img/logo-bandcamp.svg" alt="Bandcamp" class="link-icon" />
+        <span class="link-text">Bandcamp</span>
+      </a>
+
+
+
+      <a href="#" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'apple_music'});">
+        <img src="img/logo-apple-music.svg" alt="Apple Music" class="link-icon" />
+        <span class="link-text">Apple Music</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@xeraphim.music" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'tiktok'});">
+        <img src="img/logo-tiktok.svg" alt="TikTok" class="link-icon" />
+        <span class="link-text">TikTok</span>
+      </a>
+
+      <a href="https://www.facebook.com/people/Xeraphim/" class="link-button" target="_blank" rel="noopener" onclick="gtag('event', 'click', {'event_category': 'links', 'event_label': 'facebook'});">
+        <img src="img/logo-facebook.svg" alt="Facebook" class="link-icon" />
+        <span class="link-text">Facebook</span>
+      </a>
+
+
+    </div>
+
+    <footer class="page-footer">
+      <p>&copy; 2025 XERAPHIM</p>
+    </footer>
+  </div>
 </body>
 </html> 
